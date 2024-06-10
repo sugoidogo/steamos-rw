@@ -1,0 +1,11 @@
+[Unit]
+Description = start overlayed systemd units
+Requires=usr.mount
+After=usr.mount
+After=default.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/steamos-rw/overlay-units.sh start
+ExecStop=/opt/steamos-rw/overlay-units.sh stop
+RemainAfterExit=true

@@ -1,0 +1,16 @@
+[Unit]
+Description=Usr Overlay (SteamOS-RW)
+Requires=var-lib-overlays-usr.mount
+After=var-lib-overlays-usr.mount
+PartOf=steamos-rw.target
+
+[Mount]
+Where=/usr
+What=steamos-rw
+Type=overlay
+Options=lowerdir=/usr,upperdir=/var/lib/overlays/usr/upper,workdir=/var/lib/overlays/usr/work
+LazyUnmount=true
+
+[Install]
+WantedBy=sysinit.target
+RequiredBy=steamos-rw.target

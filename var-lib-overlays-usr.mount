@@ -1,0 +1,9 @@
+[Unit]
+Description = SteamOS-RW Offload - /usr
+
+[Mount]
+What=/home/.steamos/offload/usr.img
+Where=/var/lib/overlays/usr
+Type=btrfs
+Options=compress
+LazyUnmount=true

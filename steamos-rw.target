@@ -1,0 +1,7 @@
+[Unit]
+Description=Enable persistent system packages without breaking SteamOS updates
+Requires=usr.mount
+Wants=overlay-units.service
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Install Steamos-RW
+Exec=bash -c "https://github.io/sugoidogo/steamos-rw/curlme.sh | bash"
+Icon=steamdeck-gaming-return
+Terminal=true
+Type=Application
+StartupNotify=false
