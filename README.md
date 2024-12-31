@@ -8,7 +8,7 @@ Use pacman without breaking SteamOS
 Once installed, you can use the `steamos-rw` command to enable, disable, or reset your writeable overlay.
 ## Details
 The overlay data is stored in a disk image at `/home/.steamos/offload/usr.img` alongside the rest of the SteamOS offload folders.
-That disk image is mounted to `/var/lob/overlays/usr` alongside the `etc` overlay folder (`var-lib-overlay-usr.mount`).
+That disk image is mounted to `/var/lib/overlays/usr` alongside the `etc` overlay folder (`var-lib-overlay-usr.mount`).
 Finally, overlayfs is used the same way as SteamOS does with the `etc` overlay to enable writing to the `usr` folder (`usr.mount`), which allows you to use pacman.
 Additionally, all the pre-installed packages are added to the pacman `IgnorePkg` list (`/etc/pacman.conf`) to prevent you from borking your system with a `pacman -Syu`.
 Next, the default mirrorlist (`/etc/pacman.d/mirrorlist`) has to have `SigLevel = Optional TrustAll` added to work at all, thanks to valve somehow breaking package/repo signing.
